@@ -1,0 +1,11 @@
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\bin\Debug\netcoreapp2.0\TelerikAspNetCoreApp.deps.json
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\bin\Debug\netcoreapp2.0\TelerikAspNetCoreApp.runtimeconfig.json
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\bin\Debug\netcoreapp2.0\TelerikAspNetCoreApp.runtimeconfig.dev.json
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\bin\Debug\netcoreapp2.0\TelerikAspNetCoreApp.dll
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\bin\Debug\netcoreapp2.0\TelerikAspNetCoreApp.pdb
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\obj\Debug\netcoreapp2.0\TelerikAspNetCoreApp.csprojResolveAssemblyReference.cache
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\obj\Debug\netcoreapp2.0\TelerikAspNetCoreApp.csproj.CoreCompileInputs.cache
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\obj\Debug\netcoreapp2.0\TelerikAspNetCoreApp.AssemblyInfoInputs.cache
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\obj\Debug\netcoreapp2.0\TelerikAspNetCoreApp.AssemblyInfo.cs
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\obj\Debug\netcoreapp2.0\TelerikAspNetCoreApp.dll
+C:\Мои работы\Repos\TelerikAspNetCoreApp\TelerikAspNetCoreApp\obj\Debug\netcoreapp2.0\TelerikAspNetCoreApp.pdb

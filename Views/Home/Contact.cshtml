@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Content";
+}
+
+<div class="row">
+    <div class="col-xs-18 col-md-12">
+        @(Html.Kendo().TabStrip()
+           .Name("tabstrip")
+           //.Animation(animation =>
+           //    animation.Open(effect =>
+           //        effect.Fade(FadeDirection.In)))
+           .Items(tabstrip =>
+           {
+               tabstrip.Add().Text("Paris")
+        .Selected(true)
+        .LoadContentFrom("About", "Home");
+           }))
+    </div>
+</div>
+

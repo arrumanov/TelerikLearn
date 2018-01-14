@@ -1,0 +1,15 @@
+﻿
+@{
+    Layout = null;
+}
+
+@(Html.Kendo().TabStrip()
+             .Name("tabstrip")
+             .Items(tabstrip =>
+             {
+                 tabstrip.Add().Text("Paris")
+                .Selected(true)
+                .LoadContentFrom("About", "Home");
+     })
+)
+

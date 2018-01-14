@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+@(Html.Kendo().Grid<AppProducts>()
+        .Name("grid2")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.Name);
+            columns.Bound(p => p.BuyingPrice).Width(120);
+            columns.Bound(p => p.SellingPrice).Width(120);
+            columns.Bound(p => p.Description).Width(120);
+            columns.Command(command => { command.Edit(); command.Destroy(); }).Width(250);
+        })
+        .ToolBar(toolbar => toolbar.Create())
+        .Editable(editable => editable.Mode(GridEditMode.PopUp))
+        .Pageable()
+        .Sortable()
+        .Scrollable()
+        .HtmlAttributes(new { style = "height:550px;" })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(20)
+            .Model(model => model.Id(p => p.Id))
+            .Create(update => update.Action("ClientGrid_GetProducts", "Grid"))
+            .Read(read => read.Action("ClientGrid_GetProducts", "Grid"))
+            .Update(update => update.Action("ClientGrid_GetProducts", "Grid"))
+            .Destroy(update => update.Action("ClientGrid_GetProducts", "Grid"))
+        )
+)

@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="demo-section k-content">
+    <div id="tickets">
+        <form id="ticketsForm">
+            <ul id="fieldlist" style="padding: 10px;">
+                <li>
+                    <label for="products">Price Discount:</label>
+                    @(Html.Kendo().ComboBox()
+                                  .Name("products")
+                                  .DataTextField("Name")
+                                  .DataValueField("Id")
+                                  .Filter("contains")
+                                  .DataSource(source =>
+                                  {
+                                      source.Read(read =>
+                                      {
+                                          read.Action("ClientFiltering_GetProducts", "Filter");
+                                      })
+                                      .ServerFiltering(false);
+                                  })
+                                  .HtmlAttributes(new { style = "width:100%;" })
+                    )
+                </li>
+                <li>
+                    <label for="required">Price Discount:</label>
+@(Html.Kendo().MultiSelect()
+              .Name("required")
+              .AutoClose(false)
+              .TagMode(MultiSelectTagMode.Single)
+              .Placeholder("Select attendees...")
+              .BindTo(new List<string>() {
+      "Steven White",
+      "Nancy King",
+      "Anne King",
+      "Nancy Davolio",
+      "Robert Davolio",
+      "Michael Leverling",
+      "Andrew Callahan",
+      "Michael Suyama",
+      "Anne King",
+      "Laura Peacock",
+      "Robert Fuller",
+      "Janet White",
+      "Nancy Leverling",
+      "Robert Buchanan",
+      "Andrew Fuller",
+      "Anne Davolio",
+      "Andrew Suyama",
+      "Nige Buchanan",
+      "Laura Fuller"
+              })
+              .Value(new string[] { "Anne King", "Andrew Fuller" })
+)
+                </li>
+                <li>
+                    <label for="percentage">Price Discount:</label>
+                    @(Html.Kendo().NumericTextBox<double>()
+                        .Name("percentage")
+                        .Format("n0")
+
+                        .Min(0)
+                        .Max(10000)
+                        .Step(1)
+                        .Value(2)
+                        .HtmlAttributes(new { style = "width: 100%", title = "percentage" })
+                    )
+                </li>               
+            </ul>
+        </form>
+    </div>
+</div>

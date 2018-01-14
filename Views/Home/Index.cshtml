@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@(Html.Kendo().Splitter()
+              .Name("splitter")
+              .Panes(panes =>
+              {
+                  panes.Add().HtmlAttributes(new { id = "left-pane" })
+                                        .Size("300px")
+                                        .Collapsible(true)
+                                        .LoadContentFrom("Index", "Filter");
+
+                  panes.Add().HtmlAttributes(new { id = "left-pane" })
+                                    .Collapsible(false)
+                                    .LoadContentFrom("Index", "TabStrip");
+                                                  }))

@@ -1,0 +1,276 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Wrapping element 
+ Set some basic padding to keep content from hitting the edges*/
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.label {
+    color: #337ab7;
+}
+
+
+/* Sticky footer styles */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    height: 40px;
+}
+
+    .footer .text-muted {
+        margin: 0;
+        display: inline-block;
+    }
+
+.body-content > .row:first-child {
+    margin-bottom: 15px;
+}
+
+.k-tabstrip ul li.k-item {
+    width: 100px;
+}
+
+h1 a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+h1 a:hover,
+h1 a:active {
+    color: #ffffff;
+    text-decoration: none;
+} 
+
+.img-responsive {
+    padding-top: 25px;
+}
+
+/* Styling menu toggle button */
+.btn-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    height: 48px;
+}
+
+    .btn-toggle .k-icon {
+        opacity: 1;
+    }
+
+    .btn-toggle,
+    .btn-toggle:focus:active:not(.k-state-disabled):not([disabled]),
+    .btn-toggle:focus:not(.k-state-disabled):not([disabled]) {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+        .btn-toggle .k-i-hbars,
+        .btn-toggle:focus:active:not(.k-state-disabled):not([disabled]) .k-i-hbars,
+        .btn-toggle:focus:not(.k-state-disabled):not([disabled]) .k-i-hbars {
+            background-position: -80px -32px;
+        }
+
+/* Styling menu and header for smaller resolutions */
+@media (max-width: 768px) {
+
+    .k-header h1 {
+        margin: 0;
+        padding: 16px 15px 14px 60px;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+
+    .k-rpanel {
+        position: relative;
+        box-sizing: border-box;
+    }
+    .k-rpanel .k-menu {
+        float: none;
+        display: block;
+        box-sizing: border-box;
+    }
+    .k-rpanel .k-menu .k-item {
+        display: block;
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+}
+
+/*tabstrip*/
+
+.sunny, .cloudy, .rainy {
+    display: block;
+    margin: 30px auto 10px;
+    width: 128px;
+    height: 128px;
+    background: url('@Url.Content("~/shared/web/tabstrip/weather.png")') transparent no-repeat 0 0;
+}
+
+.cloudy {
+    background-position: -128px 0;
+}
+
+.rainy {
+    background-position: -256px 0;
+}
+
+.weather {
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+#tabstrip h2 {
+    font-weight: lighter;
+    font-size: 5em;
+    line-height: 1;
+    padding: 0 0 0 30px;
+    margin: 0;
+}
+
+    #tabstrip h2 span {
+        background: none;
+        padding-left: 5px;
+        font-size: .3em;
+        vertical-align: top;
+    }
+
+#tabstrip p {
+    margin: 0;
+    padding: 0;
+}
+
+/*Tab*/
+.k-tabstrip .k-tabstrip-items li .k-link {
+    padding-right: 0.46em;
+}
+
+    .k-tabstrip .k-tabstrip-items li .k-link[data-type='remove'] {
+        padding-left: 0.46em;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .k-tabstrip .k-tabstrip-items li .k-link .k-icon {
+        margin: 0;
+    }
+
+        .k-tabstrip .k-tabstrip-items li .k-link .k-icon:hover {
+            color: red;
+        }
+
+/*splitter*/
+/*#vertical {
+    height: 380px;
+    margin: 0 auto;
+}
+
+#middle-pane {
+    color: #000;
+    background-color: #ccc;
+}
+
+#bottom-pane {
+    color: #000;
+    background-color: #aaa;
+}
+
+#left-pane, #center-pane, #right-pane {
+    color: #000;
+    background-color: #eee;
+}
+
+.pane-content {
+    padding: 0 10px;
+}*/
+
+.pane-content {
+    padding: 0 10px;
+}
+
+.k-splitbar.k-state-focused {
+    background-color: #aaa;
+    border-color: #aaa;
+}
+
+/*Filter*/
+#fieldlist {
+    margin: 0;
+    padding: 0;
+}
+
+    #fieldlist li {
+        list-style: none;
+        padding-bottom: .7em;
+        text-align: left;
+    }
+
+    #fieldlist label {
+        display: block;
+        padding-bottom: .3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #444;
+    }
+
+    #fieldlist li.status {
+        text-align: center;
+    }
+
+    #fieldlist li .k-widget:not(.k-tooltip),
+    #fieldlist li .k-textbox {
+        margin: 0 5px 5px 0;
+    }
+
+.confirm {
+    padding-top: 1em;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+#fieldlist li input[type="checkbox"] {
+    margin: 0 5px 0 0;
+}
+
+span.k-widget.k-tooltip-validation {
+    display: inline-block;
+    width: 160px;
+    text-align: left;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    color: red;
+}
+
+.k-tooltip-validation .k-warning {
+    display: none;
+}
